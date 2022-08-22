@@ -20,13 +20,13 @@ The function runmodel() is used to run the models. It takes a number of argument
 - **start** = (type=:LP, power="E taylor", e="convex segments origo") or just (type=:LP,) to use same power & e as main run (but don't forget the last comma).
 
 In the paper, the models evaluated are AMIP, A, B, B:L, C, D, and E. Here is the arguments used to run these models:  
-- A_MIP: runmodel(2019, weeks=1:52, type=:NLP, power="bilinear HeadPE", pe="ncv poly rampseg", head=:standardbasic, start=(type=:MIP, power="bilinear HeadPE", pe="ncv segments zeroseg"))
-- A: runmodel(y, weeks=1:52, type=:NLP, power="bilinear HeadPE", pe="ncv poly rampseg", head=:standardbasic, start=(type=:LP, power="PE taylor", pe="cv segments origo"))
-- B: runmodel(y, weeks=1:52, type=:NLP, power="bilinear HeadPE", pe="cv poly origo", head=:standardbasic, start=(type=:LP, power="PE taylor", pe="cv segments origo"))
-- B:L: runmodel(y, weeks=1:52, type=:LP, power="PE taylor", pe="cv segments origo", head=:standardbasic)
-- C: runmodel(y, weeks=1:52, save_variables=true, type=:LP, power="PE constant head", pe="cv segments origo", head=:constantmean)	
-- D: runmodel(y, weeks=1:52, save_variables=true, type=:LP, power="PE constant head", pe="constant eta", head=:constantmean)	
-- E: runmodel(y, weeks=1:52, save_variables=true, type=:LP, power="aggregated")
+- A_MIP: runmodel(2019, weeks=1:52, type=:NLP, power="bilinear HeadE", e="ncv poly rampseg", head=:standardbasic, start=(type=:MIP, power="bilinear HeadE", pe="ncv segments zeroseg"))
+- A: runmodel(2019, weeks=1:52, type=:NLP, power="bilinear HeadE", e="ncv poly rampseg", head=:standardbasic, start=(type=:LP, power="E taylor", e="cv segments origo"))
+- B: runmodel(2019, weeks=1:52, type=:NLP, power="bilinear HeadE", e="cv poly origo", head=:standardbasic, start=(type=:LP, power="E taylor", e="cv segments origo"))
+- B:L: runmodel(2019, weeks=1:52, type=:LP, power="E taylor", e="cv segments origo", head=:standardbasic)
+- C: runmodel(2019, weeks=1:52, save_variables=true, type=:LP, power="E constant head", e="cv segments origo", head=:constantmean)	
+- D: runmodel(2019, weeks=1:52, save_variables=true, type=:LP, power="E constant head", e="constant eta", head=:constantmean)	
+- E: runmodel(2019, weeks=1:52, save_variables=true, type=:LP, power="aggregated")
 
 ## Content
 - *Rivermodel.jl* contains the function to run the model, runmodel(), and the solver settings  
