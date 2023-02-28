@@ -24,9 +24,9 @@ In the paper, the models evaluated are AMIP, A, B, B:L, C, D, and E. Here is the
 - A: runmodel(2019, weeks=1:52, type=:NLP, power="bilinear HeadE", e="ncv poly rampseg", head=:standardbasic, start=(type=:LP, power="E taylor", e="cv segments origo"))
 - B: runmodel(2019, weeks=1:52, type=:NLP, power="bilinear HeadE", e="cv poly origo", head=:standardbasic, start=(type=:LP, power="E taylor", e="cv segments origo"))
 - B:L: runmodel(2019, weeks=1:52, type=:LP, power="E taylor", e="cv segments origo", head=:standardbasic)
-- C: runmodel(2019, weeks=1:52, save_variables=true, type=:LP, power="E constant head", e="cv segments origo", head=:constantmean)	
-- D: runmodel(2019, weeks=1:52, save_variables=true, type=:LP, power="E constant head", e="constant eta", head=:constantmean)	
-- E: runmodel(2019, weeks=1:52, save_variables=true, type=:LP, power="aggregated")
+- C: runmodel(2019, weeks=1:52, type=:LP, power="E constant head", e="cv segments origo", head=:constantmean)	
+- D: runmodel(2019, weeks=1:52, type=:LP, power="E constant head", e="constant eta", head=:constantmean)	
+- E: runmodel(2019, weeks=1:52, type=:LP, power="aggregated")
 
 ## Content
 - *Rivermodel.jl* contains the function to run the model, runmodel(), and the solver settings  
