@@ -1,7 +1,7 @@
 # Rivermodel Public
 Public version of Rivermodel, a set of hydropower optimization models.
  
-This repo contains the source code for the article *Exploring trade-offs between aggregated and turbine-level representations of hydropower in optimization models* [Manuscript submitted for publication].
+This repo contains the source code for the article *Trade-offs between aggregated and turbine-level representations of hydropower in optimization models* [https://doi.org/10.1016/j.rser.2023.113406].
 
 The code constitutes a set of deterministic hydropower models in which the techno-physical detail can be varied, to explore trade-offs between computational time and accuracy in optimized power production. 
 
